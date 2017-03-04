@@ -48,9 +48,9 @@ public class UserService {
         return result;
     }
 
-    public DeleteUserResponse deleteUserById(String id){
+    public DeleteUserResponse deleteUserById(String id) {
         DeleteUserResponse result = new DeleteUserResponse();
-        result.setMessage("USER WITH ID+ "+ id +" NOT FOUND");
+        result.setMessage("USER WITH ID+ " + id + " NOT FOUND");
 
         if (id != null && !id.isEmpty()) {
             User tempUser = null;
@@ -63,7 +63,7 @@ public class UserService {
             }
             Storage.removeUser(tempUser);
             result.setStatus("OK");
-            result.setMessage("USER WITH ID: "+ id +" WAS REMOVED");
+            result.setMessage("USER WITH ID: " + id + " WAS REMOVED");
         }
 
         return result;
